@@ -1519,3 +1519,14 @@ export function getDefaultCountry(location?: {countryCode?: string}) {
   }
   return DEFAULT_PHONE_COUNTRY
 }
+
+export function getPhoneCodeFromCountryCode(countryCode: string) {
+  const country =
+    getCountriesWithTelephoneCodes(i18n)[
+      countryCode.toUpperCase() as keyof ReturnType<
+        typeof getCountriesWithTelephoneCodes
+      >
+    ]
+  if (!country) throw new Error(`Country ${countryCode} not found`)
+  return country.code
+}
