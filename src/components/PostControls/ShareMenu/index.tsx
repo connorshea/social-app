@@ -101,19 +101,18 @@ let ShareMenuButton = ({
             )
           }}
         </Menu.Trigger>
-        {hasBeenOpen &&
-          (
-            // Lazily initialized. Once mounted, they stay mounted.
-            <ShareMenuItems
-              testID={testID}
-              post={post}
-              record={record}
-              richText={richText}
-              timestamp={timestamp}
-              threadgateRecord={threadgateRecord}
-              onShare={onShare}
-            />
-          )}
+        {hasBeenOpen && (
+          // Lazily initialized. Once mounted, they stay mounted.
+          <ShareMenuItems
+            testID={testID}
+            post={post}
+            record={record}
+            richText={richText}
+            timestamp={timestamp}
+            threadgateRecord={threadgateRecord}
+            onShare={onShare}
+          />
+        )}
       </Menu.Root>
     </EventStopper>
   )

@@ -75,21 +75,20 @@ let PostMenuButton = ({
             )
           }}
         </Menu.Trigger>
-        {hasBeenOpen &&
-          (
-            // Lazily initialized. Once mounted, they stay mounted.
-            <PostMenuItems
-              testID={testID}
-              post={post}
-              postFeedContext={postFeedContext}
-              postReqId={postReqId}
-              record={record}
-              richText={richText}
-              timestamp={timestamp}
-              threadgateRecord={threadgateRecord}
-              onShowLess={onShowLess}
-            />
-          )}
+        {hasBeenOpen && (
+          // Lazily initialized. Once mounted, they stay mounted.
+          <PostMenuItems
+            testID={testID}
+            post={post}
+            postFeedContext={postFeedContext}
+            postReqId={postReqId}
+            record={record}
+            richText={richText}
+            timestamp={timestamp}
+            threadgateRecord={threadgateRecord}
+            onShowLess={onShowLess}
+          />
+        )}
       </Menu.Root>
     </EventStopper>
   )

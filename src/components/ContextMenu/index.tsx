@@ -596,81 +596,80 @@ export function Outer({
       <Context.Provider value={context}>
         <MenuContext.Provider value={menuContext}>
           <Backdrop animation={animationSV} onPress={context.close} />
-          {context.mode === 'full' &&
-            (
-              /* containing element - stays the same size, so we measure it
+          {context.mode === 'full' && (
+            /* containing element - stays the same size, so we measure it
            to determine if a translation is necessary. also has the positioning */
-              <Animated.View
-                onLayout={onLayout}
-                style={[
-                  a.absolute,
-                  a.z_10,
-                  a.mt_xs,
-                  {
-                    width: MENU_WIDTH,
-                    top: context.measurement.y + context.measurement.height,
-                  },
-                  align === 'left'
-                    ? {left: context.measurement.x}
-                    : {
-                        right:
-                          screenWidth -
-                          context.measurement.x -
-                          context.measurement.width,
-                      },
-                  animatedContainerStyle,
-                ]}>
-                {/* scaling element - has the scale/fade animation on it */}
-                <Animated.View
-                  style={[
-                    a.rounded_md,
-                    a.shadow_md,
-                    t.atoms.bg_contrast_25,
-                    a.w_full,
-                    // @ts-ignore react-native-web expects string, and this file is platform-split -sfn
-                    // note: above @ts-ignore cannot be a @ts-expect-error because this does not cause an error
-                    // in the typecheck CI - presumably because of RNW overriding the types
-                    {
-                      transformOrigin:
-                        // "top right" doesn't seem to work on android, so set explicitly in pixels
-                        align === 'left' ? [0, 0, 0] : [MENU_WIDTH, 0, 0],
+            <Animated.View
+              onLayout={onLayout}
+              style={[
+                a.absolute,
+                a.z_10,
+                a.mt_xs,
+                {
+                  width: MENU_WIDTH,
+                  top: context.measurement.y + context.measurement.height,
+                },
+                align === 'left'
+                  ? {left: context.measurement.x}
+                  : {
+                      right:
+                        screenWidth -
+                        context.measurement.x -
+                        context.measurement.width,
                     },
-                    animatedStyle,
-                    style,
-                  ]}>
-                  {/* innermost element - needs an overflow: hidden for children, but we also need a shadow,
+                animatedContainerStyle,
+              ]}>
+              {/* scaling element - has the scale/fade animation on it */}
+              <Animated.View
+                style={[
+                  a.rounded_md,
+                  a.shadow_md,
+                  t.atoms.bg_contrast_25,
+                  a.w_full,
+                  // @ts-ignore react-native-web expects string, and this file is platform-split -sfn
+                  // note: above @ts-ignore cannot be a @ts-expect-error because this does not cause an error
+                  // in the typecheck CI - presumably because of RNW overriding the types
+                  {
+                    transformOrigin:
+                      // "top right" doesn't seem to work on android, so set explicitly in pixels
+                      align === 'left' ? [0, 0, 0] : [MENU_WIDTH, 0, 0],
+                  },
+                  animatedStyle,
+                  style,
+                ]}>
+                {/* innermost element - needs an overflow: hidden for children, but we also need a shadow,
                 so put the shadow on the scaling element and the overflow on the innermost element */}
-                  <View
-                    style={[
-                      a.flex_1,
-                      a.rounded_md,
-                      a.overflow_hidden,
-                      a.border,
-                      t.atoms.border_contrast_low,
-                    ]}>
-                    {flattenReactChildren(children).map((child, i) => {
-                      return React.isValidElement(child) &&
-                        (child.type === Item || child.type === Divider) ? (
-                        <React.Fragment key={i}>
-                          {i > 0 ? (
-                            <View
-                              style={[a.border_b, t.atoms.border_contrast_low]}
-                            />
-                          ) : null}
-                          {React.cloneElement(child, {
-                            // @ts-expect-error not typed
-                            style: {
-                              borderRadius: 0,
-                              borderWidth: 0,
-                            },
-                          })}
-                        </React.Fragment>
-                      ) : null
-                    })}
-                  </View>
-                </Animated.View>
+                <View
+                  style={[
+                    a.flex_1,
+                    a.rounded_md,
+                    a.overflow_hidden,
+                    a.border,
+                    t.atoms.border_contrast_low,
+                  ]}>
+                  {flattenReactChildren(children).map((child, i) => {
+                    return React.isValidElement(child) &&
+                      (child.type === Item || child.type === Divider) ? (
+                      <React.Fragment key={i}>
+                        {i > 0 ? (
+                          <View
+                            style={[a.border_b, t.atoms.border_contrast_low]}
+                          />
+                        ) : null}
+                        {React.cloneElement(child, {
+                          // @ts-expect-error not typed
+                          style: {
+                            borderRadius: 0,
+                            borderWidth: 0,
+                          },
+                        })}
+                      </React.Fragment>
+                    ) : null
+                  })}
+                </View>
               </Animated.View>
-            )}
+            </Animated.View>
+          )}
         </MenuContext.Provider>
       </Context.Provider>
     </Portal>
