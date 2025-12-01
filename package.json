@@ -340,7 +340,7 @@
       "eslint --cache --fix"
     ],
     "*{.js,.jsx,.ts,.tsx,.css}": [
-      "prettier --cache --write --ignore-unknown"
+      "oxfmt --no-error-on-unmatched-pattern"
     ],
     "assets/icons/*.svg": [
       "svgo"
