@@ -5425,6 +5425,46 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@oxfmt/darwin-arm64@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@oxfmt/darwin-arm64/-/darwin-arm64-0.15.0.tgz#cae01db9de176ea51c17892dae54752dbd2c6ced"
+  integrity sha512-M5xiXkqtwG/1yVlNZJaXeFJGs1jVTT7Q6gfdIU3nO8wXIj0lsfcirc55XPObWohA8T73oLh3Cp1oSQluxVXQrQ==
+
+"@oxfmt/darwin-x64@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@oxfmt/darwin-x64/-/darwin-x64-0.15.0.tgz#1672c8c0027690df216e79b94f8566404af647bc"
+  integrity sha512-HXBZBV1oqmZWcmXXQE+zXNpe8nOXyeY9oLeW6KfflR1HCicR75Tmer6Y5/euVOb/mDfegkkjReRoQnYxJ6CmtQ==
+
+"@oxfmt/linux-arm64-gnu@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@oxfmt/linux-arm64-gnu/-/linux-arm64-gnu-0.15.0.tgz#0ec2a319a8a8086da33184bbe12d1f22bb38467e"
+  integrity sha512-udaMrO+a6XFCtr0wPMHNFxyYD824y0FzjMrll77P8t2jDxiNAwbEzbz7SU0VKSEH36K62bgS2Dn/yfWedXQFrQ==
+
+"@oxfmt/linux-arm64-musl@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@oxfmt/linux-arm64-musl/-/linux-arm64-musl-0.15.0.tgz#aaf80e507c6324aee2e586778f7deda22da4ae30"
+  integrity sha512-HHFSA5bL60DG2QjI9KnkCCImdBitLoun1LGitMpI9SQDYeKezDr8rz4IQWeE2h45dWltFFm5fONh6cwSLFeHOQ==
+
+"@oxfmt/linux-x64-gnu@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@oxfmt/linux-x64-gnu/-/linux-x64-gnu-0.15.0.tgz#10772596560077a5f34ec2b11f9d8cec645da6b5"
+  integrity sha512-M1dN2Erxd5d5e/YP19Rv6TsDiHAgeAydOX/Qr42/CQfP93edohFOXvZsgthEGQVKNcc45SNDd2Fscx3szw68iA==
+
+"@oxfmt/linux-x64-musl@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@oxfmt/linux-x64-musl/-/linux-x64-musl-0.15.0.tgz#b2cc869a1861c07724950e3108a71624c08a4d59"
+  integrity sha512-Y7f+Daz9/Hnmtkja6Va0E8iYYSSV4RGyIz8FD2flfd3BIA1TOVOYwlmkAFQkBUhwuIDsYOtsWcAXJAf8cWiAEw==
+
+"@oxfmt/win32-arm64@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@oxfmt/win32-arm64/-/win32-arm64-0.15.0.tgz#189cf86cfdaab57395eafb2a9d8cb86465efad30"
+  integrity sha512-IhrYWgy9yF5tynkScyiQEiTxvEXVo8L++JuIIv36p2Vdk7wPNtfq1tHSiu1nrUw33idjsWZ0QsP6Sx2e+48s0A==
+
+"@oxfmt/win32-x64@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@oxfmt/win32-x64/-/win32-x64-0.15.0.tgz#3d809d4eb6f1484c900c3c12387060e3aecf2d2c"
+  integrity sha512-ngMLVe0UxjKtjZ79MYp0qJDolltFOAFp511Tfr89nVv077cQosqZ0Sx7hmIQLA0G+wyADfG/UMNcpPVyC/Msig==
+
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
@@ -15522,6 +15562,20 @@ own-keys@^1.0.1:
     object-keys "^1.1.1"
     safe-push-apply "^1.0.0"
 
+oxfmt@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/oxfmt/-/oxfmt-0.15.0.tgz#970c07720f8f10e5024240f91064fef3b8787148"
+  integrity sha512-WOPBsZteu/H7t+3UGuEDyYi87+v2H96zyBwrEIwq4SEAt8P3bL6velrvs71V6aOpxjLcIPAnKjXeHScvFImI4w==
+  optionalDependencies:
+    "@oxfmt/darwin-arm64" "0.15.0"
+    "@oxfmt/darwin-x64" "0.15.0"
+    "@oxfmt/linux-arm64-gnu" "0.15.0"
+    "@oxfmt/linux-arm64-musl" "0.15.0"
+    "@oxfmt/linux-x64-gnu" "0.15.0"
+    "@oxfmt/linux-x64-musl" "0.15.0"
+    "@oxfmt/win32-arm64" "0.15.0"
+    "@oxfmt/win32-x64" "0.15.0"
+
 p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
@@ -16292,10 +16346,10 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.6.0.tgz#18ec98d62cb0757a5d4eab40253ff3e6d0fc8dea"
-  integrity sha512-ujSB9uXHJKzM/2GBuE0hBOUgC77CN3Bnpqa+g80bkv3T3A93wL/xlzDATHhnhkzifz/UE2SNOvmbTz5hSkDlHw==
+prettier@^3.7.3:
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.7.3.tgz#99a8891f6c990cfa54bcff2a0d276e6f845e59ab"
+  integrity sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==
 
 pretty-bytes@^5.6.0:
   version "5.6.0"

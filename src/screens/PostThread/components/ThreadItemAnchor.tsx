@@ -537,7 +537,7 @@ function ExpandedPostDetails({
     () =>
       Boolean(
         langPrefs.primaryLanguage &&
-          !isPostInLanguage(post, [langPrefs.primaryLanguage]),
+        !isPostInLanguage(post, [langPrefs.primaryLanguage]),
       ),
     [post, langPrefs.primaryLanguage],
   )
